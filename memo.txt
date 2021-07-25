@@ -1,3 +1,10 @@
 axios
 →おそらくREST　APIにアクセスするためのもので、Javaに限らずなんでも使えそう・・・？
 .
+
+routerでページ遷移を行う
+
+packageの＠typesはTypeScript対応の意味
+
+redux-toolkitをテンプレにした場合、紫の画面が初期表示される
+npx create-react-app . --template redux-typescript --use-npm
