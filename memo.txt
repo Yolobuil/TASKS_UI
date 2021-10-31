@@ -1,6 +1,5 @@
 axios
 →おそらくREST　APIにアクセスするためのもので、Javaに限らずなんでも使えそう・・・？
-.
 
 routerでページ遷移を行う
 
@@ -8,3 +7,30 @@ packageの＠typesはTypeScript対応の意味
 
 redux-toolkitをテンプレにした場合、紫の画面が初期表示される
 npx create-react-app . --template redux-typescript --use-npm
+
+ファイルの説明
+Slice.spec.tsについて
+Sliceの中にあるReducerなどに対する、テストコードのexampleコードが自動生成されたもの
+
+API.tsについて
+非同期関数であるfetchCountという関数が定義され、500ミリビョウ待ってreturnするように設定されている
+
+stateの書き方（新）
+status : 'A'|'B'|'C' いずれかを保持するステート
+
+createAysncThunk　→　非同期関数
+API.tsで定義した非同期関数を呼び出して使用する
+returnの内容はextraReducerに渡されていく
+非同期関数の後処理をextraReducerで行うことができる。
+
+createSliceの中でextraReducerがある
+
+payload→引数で受け取った値
+
+ReduxStoreに登録されているSlicenoアクションを呼び出したり、stateを読みにいくときは、useDispatchやuseSelecterを使う
+../../app/hooksで型を厳密につけたuseAppSelectorやueAppDispatchを使用する
+→hooks.tsのなかでそれぞれに型をつける（違いはよりTypeScript的に型がづいていて安全性が高まる）
+
+
+
+REACT_APP_API_URLをReactが自動で環境変数として認識する。
